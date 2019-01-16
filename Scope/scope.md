@@ -159,3 +159,5 @@ Function arguments (parameters) work as local variables inside functions.
 http://www.digital-web.com/articles/scope_in_javascript/
 
 http://web.archive.org/web/20110725013125/http://www.digital-web.com/articles/scope_in_javascript/
+
+https://scotch.io/tutorials/understanding-scope-in-javascript

@@ -1,77 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>This Example</title>
-  </head>
-  <body>
-    <h1>Make sure to view the console to see the action!</h1>
 
-    <script type="text/javascript">
-      // EXAMPLE ONE:
-      // --------------------------------------------------
-      // What is "this" going to print?
+<head>
+  <meta charset="UTF-8" />
+  <title>This Example</title>
+</head>
 
-      console.log(this); // window
+<body>
+  <h1>Make sure to view the console to see the action!</h1>
 
-      // EXAMPLE TWO:
-      // --------------------------------------------------
-      // What is "this" going to print?
+  <script type="text/javascript">
+    // EXAMPLE ONE:
+    // --------------------------------------------------
+    // What is "this" going to print?
 
-      function myFunction() {
-        console.log(this); // object
+    console.log(this);
+
+    // EXAMPLE TWO:
+    // --------------------------------------------------
+    // What is "this" going to print?
+
+    function myFunction() {
+      console.log(this);
+    }
+    myFunction();
+
+    // EXAMPLE THREE (IMPORTANT):
+    // --------------------------------------------------
+    // What is "someObj.say()" going to print?
+
+    var someObj = {
+      name: "Red Hat",
+      say: function () {
+        console.log(this.name);
       }
-      myFunction();
+    };
+    someObj.say();
 
-      // EXAMPLE THREE (IMPORTANT):
-      // --------------------------------------------------
-      // What is "someObj.say()" going to print?
+    // EXAMPLE FOUR (BONUS, TRICKY!):
+    // --------------------------------------------------
+    // What is "myObj.yell()" going to print? Why?
 
-      var someObj = {
-        name: "Red Hat",
-        say: function() {
-          console.log(this.name); // redhat
-        }
-      };
-      someObj.say();
+    var myObj = {
+      name: "",
+      yell: function () {
+        this.name = "Star Powerup";
 
-      // EXAMPLE FOUR (BONUS, TRICKY!):
-      // --------------------------------------------------
-      // What is "myObj.yell()" going to print? Why?
+        var changeName = function (newName) {
+          this.name = newName;
+        };
+        changeName("Blue Shell");
+        console.log(this);
+      }
+    };
+    myObj.yell();
 
-      var myObj = {
-        name: "",
-        yell: function() {
-          this.name = "Star Powerup";
+    // EXAMPLE FIVE (BONUS, TRICKY!):
+    // --------------------------------------------------
+    // What is "myObj.yell()" going to print? Why?
 
-          var changeName = function(newName) {
-            this.name = newName;
-          };
-          changeName("Blue Shell");
-          console.log(this);
-        }
-      };
-      myObj.yell();
+    var myObj = {
+      name: "",
+      yell: function () {
+        // This line is important!
+        var thisObject = this;
 
-      // EXAMPLE FIVE (BONUS, TRICKY!):
-      // --------------------------------------------------
-      // What is "myObj.yell()" going to print? Why?
+        this.name = "Star Powerup";
+        var changeName = function (newName) {
+          thisObject.name = newName;
+        };
+        changeName("Blue Shell");
+        console.log(thisObject);
+      }
+    };
+    myObj.yell();
+  </script>
+</body>
 
-      var myObj = {
-        name: "",
-        yell: function() {
-          // This line is important!
-          var thisObject = this;
-
-          this.name = "Star Powerup";
-          var changeName = function(newName) {
-            thisObject.name = newName;
-          };
-          changeName("Blue Shell");
-          console.log(thisObject);
-        }
-      };
-      myObj.yell();
-    </script>
-  </body>
 </html>
