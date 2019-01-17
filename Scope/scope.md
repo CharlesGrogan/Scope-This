@@ -18,7 +18,7 @@ Local JavaScript Variables
 Variables declared within a JavaScript function, become LOCAL to the function.
 
 Local variables have Function scope: They can only be accessed from within the function.
--------------------------------------------------------
+
 <html>
 <body>
 
@@ -52,7 +52,7 @@ Local variables are created when a function starts, and deleted when the functio
 A variable declared outside a function, becomes GLOBAL.
 
 A global variable has global scope: All scripts and functions on a web page can access it. 
--------------------------------------------------------
+
 <html>
 <body>
 
@@ -84,7 +84,7 @@ Scope determines the accessibility of variables, objects, and functions from dif
 If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
 
 This code example will declare a global variable carName, even if the value is assigned inside a function.
--------------------------------------------------------
+
 <html>
 <body>
 
@@ -117,7 +117,7 @@ Global variables are not created automatically in "Strict Mode".
 With JavaScript, the global scope is the complete JavaScript environment.
 
 In HTML, the global scope is the window object. All global variables belong to the window object.
--------------------------------------------------------
+
 <html>
 <body>
 

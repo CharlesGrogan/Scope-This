@@ -22,6 +22,7 @@ In an object method, this refers to the "owner" of the method.
 In the example on the top of this page, this refers to the person object.
 
 The person object is the owner of the fullName method.
+
 ## Example
 <script>
 // Create an object:
@@ -37,7 +38,7 @@ var person = {
 // Display data from the object:
 document.getElementById("demo").innerHTML = person.fullName(); // Return John Doe
 </script>
-
+-------------------------------------------------------------------------------------------------------
 ## this Alone
 When used alone, the owner is the Global object, so this refers to the Global object.
 
@@ -50,6 +51,8 @@ document.getElementById("demo").innerHTML = x;
 
 // x returns [object Window]
 </script>
+
+------------------------------------------------------------------------------------------------------
 
 ## this in a Function (Default)
 In a JavaScript function, the owner of the function is the default binding for this.
@@ -76,6 +79,7 @@ function myFunction() {
 
 </body>
 </html>
+-------------------------------------------------------------------------------------------------------
 
 ## this in a Function (Strict)
 JavaScript strict mode does not allow default binding.
@@ -104,6 +108,7 @@ function myFunction() {
 
 </body>
 </html>
+-------------------------------------------------------------------------------------------------------
 
 ## this in Event Handlers
 In HTML event handlers, this refers to the HTML element that received the event:
@@ -118,6 +123,7 @@ In HTML event handlers, this refers to the HTML element that received the event:
 <!-- the button will disappear in this example -->
 </body>
 </html>
+-------------------------------------------------------------------------------------------------------
 
 ## Object Method Binding
 In these examples, this is the person object (The person object is the "owner" of the function):
@@ -151,6 +157,7 @@ document.getElementById("demo").innerHTML = person.myFunction();
 
 </body>
 </html>
+-------------------------------------------------------------------------------------------------------
 
 <html>
 <body>
@@ -181,6 +188,7 @@ document.getElementById("demo").innerHTML = person.fullName();
 
 </body>
 </html>
+-------------------------------------------------------------------------------------------------------
 
 ## Explicit Function Binding
 The call() and apply() methods are predefined JavaScript methods.
@@ -218,6 +226,7 @@ document.getElementById("demo").innerHTML = x;
 
 </body>
 </html>
+-------------------------------------------------------------------------------------------------------
 
 ## Resources
 https://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Open up the console to see the magic!!</h1>
+
+    <script>
+      // Cat1 = "this" called inside a method inside a method
+
+      var cat1 = {
+        name: "Tazz",
+        showName: function() {
+          console.log("Cat1: ", this.name);
+        }
+      };
+
+      cat1.showName(); // Tazz
+
+      //Cat2 = "this" called inside a function nested inside a method
+
+      var cat2 = {
+        name: "Walter",
+        tasks: ["sleep", "sleep more", "ignore you"],
+        showTasks: function() {
+          this.tasks.forEach(function(task) {
+            console.log(this.name + " wants to " + task);
+          });
+        }
+      };
+
+      cat2.showTasks();
+
+      //Cat3 = "this" called inside an ARROW function nested inside a method
+
+      var cat3 = {
+        name: "Simon",
+        tasks: ["sleep", "sleep more", "ignore you"],
+        showTasks: function() {
+          this.tasks.forEach(task =>
+            console.log(this.name + " wants to " + task)
+          );
+        }
+      };
+
+      cat3.showTasks();
+    </script>
+  </body>
+</html>
