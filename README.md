@@ -1,3 +1,3 @@
 # Scope-This
 
-I created this repository so that I can track and essentially have a go-to "bible" of sorts when it comes to the topics of This and Scope. Sometimes you just need a quick reference with solid examples - this is mine. Enjoy. 
+I created this repository to compile activites, rules, and examples pertaining to the topics of `this` and `scope`. Sometimes you just need a quick reference with solid examples - This is a living document. Enjoy. 
